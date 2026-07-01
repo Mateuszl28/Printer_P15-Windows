@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- net8.0-windows10.0.19041.0 unlocks the WinRT Bluetooth LE APIs
+         (Windows.Devices.Bluetooth) used by the driver. -->
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>P15Printer</AssemblyName>
+    <RootNamespace>P15Printer</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Image loading / grayscale conversion. Windows-only, which is fine here. -->
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
